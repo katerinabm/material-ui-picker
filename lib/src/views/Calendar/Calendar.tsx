@@ -287,7 +287,7 @@ export class Calendar extends React.Component<CalendarProps, CalendarState> {
       return weeks.map(week => (
       <div key={`week-${week[0]!.toString()}`} className={classes.week}>
         <span className={classes.weekNumbersCustom}>W
-        {week[6]!.getWeek()}
+        {(week[6] as any)!.getWeek()}
       
         </span>{this.renderDays(week)}
       </div>
